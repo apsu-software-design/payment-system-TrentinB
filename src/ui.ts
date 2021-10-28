@@ -8,7 +8,7 @@ import {PaymentSystemContext} from './payment_systems';
  * Function to run the UI
  */
 export function start() {
-  showMainMenu(new PaymentSystemContext());
+  showMainMenu(new PaymentSystemContext(""));
 }
 
 /**
@@ -40,6 +40,10 @@ function showMainMenu(psc:PaymentSystemContext) {
 }
 
 function showCreditCardPaymentMenu(psc:PaymentSystemContext) {
+
+  new PaymentSystemContext("CreditCard");
+  //I'm leaving this here as a reference. If you're reading this then I forgot to delete it after I finished
+  /*
   console.log('Enter Credit Card Payment Details.');
 
   let name:string = readlineSync.question('  Name: ');
@@ -56,9 +60,12 @@ function showCreditCardPaymentMenu(psc:PaymentSystemContext) {
   else {
       console.log('The payment is invalid.');
   }
+  */
 }
 
 function showBankDraftPaymentMenu(psc:PaymentSystemContext) {
+  new PaymentSystemContext("BankDraft");
+  /*
   console.log('Enter Bank Account Details.');
   let name:string = readlineSync.question('  Name: ');
   let bankRoutingNumber:string = readlineSync.question('  Bank Routing Number: ');
@@ -74,9 +81,12 @@ function showBankDraftPaymentMenu(psc:PaymentSystemContext) {
   else {
       console.log('The payment is invalid.');
   }
+  */
 }
 
 function showOnlinePaymentMenu(psc:PaymentSystemContext) {
+  new PaymentSystemContext("OnlinePay");
+  /*
   console.log('Enter Online Payment Details.');
   let email:string = readlineSync.question('  Enter Your Email Address: ');
   let paymentPassword:string = readlineSync.question('  Enter Your Payment Password: ');
@@ -91,9 +101,12 @@ function showOnlinePaymentMenu(psc:PaymentSystemContext) {
   else {
       console.log('The payment is invalid.');
   }
+  */
 }
 
 function showOfflinePaymentMenu(psc:PaymentSystemContext) {
+  new PaymentSystemContext("OfflinePay");
+  /*
   console.log('Enter Offline Payment Details.');
   let name:string = readlineSync.question('  Name: ');
   let billingAddress:string = readlineSync.question('  Enter Your Billing Address: ');
@@ -108,5 +121,6 @@ function showOfflinePaymentMenu(psc:PaymentSystemContext) {
   else {
       console.log('The payment is invalid.');
   }
+  */
 }
 
